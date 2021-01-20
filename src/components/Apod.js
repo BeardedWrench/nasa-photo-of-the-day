@@ -30,7 +30,7 @@ export default function Apod( props ){
     return (
         <div>
             <Headline text={ details.title } />
-            <Photo url={ details.url } hd={ details.hdurl } />
+            <Photo url={ details.url } hd={ details.hdurl } alt={ details.title } />
             <Summary text={ details.explanation } />
         </div>
     );

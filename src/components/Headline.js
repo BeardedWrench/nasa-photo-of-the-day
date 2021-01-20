@@ -1,7 +1,7 @@
 /**
  * Default Imports 👩‍💻
  */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 
 export default function Headline( props ){

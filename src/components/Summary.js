@@ -1,10 +1,10 @@
 /**
  * Default Imports 👩‍💻
  */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 
-export default function Photo( props ){
+export default function Summary( props ){
     const { text } = props;
     return (
         <p>{ text }</p>

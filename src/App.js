@@ -14,6 +14,7 @@ let yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + dd;
 
+
 function App() {
 
   const [ day, setDay ] = useState( today );
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar onChange={ changeDate } />
+      <SearchBar onChange={ changeDate } current={ day }/>
       <Apod date={ day } />
     </div>
   );

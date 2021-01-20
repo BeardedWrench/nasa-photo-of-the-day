@@ -6,6 +6,7 @@ export default function Searchbar( props ){
             <input
             type="date"
             max="2021-01-20"
+            value={ props.current }
             onChange={ props.onChange }
             />
         </form>
