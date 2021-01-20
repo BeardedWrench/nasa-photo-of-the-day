@@ -1,13 +1,32 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from 'react';
+import './App.css';
+
+/**
+ * Import Custom Components 👩‍💻
+ */
+import Apod from './components/Apod'
+import SearchBar from './components/Searchbar';
+
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0');
+let yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
 
 function App() {
+
+  const [ day, setDay ] = useState( today );
+
+  const changeDate = ( event ) => {
+    const { value } = event.target;
+    setDay( value )
+  }
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <SearchBar onChange={ changeDate } />
+      <Apod date={ day } />
     </div>
   );
 }
