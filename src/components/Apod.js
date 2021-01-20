@@ -9,6 +9,7 @@ import { API_KEY } from '../constants'
  */
 import Headline from './Headline';
 import Photo from './Photo';
+import Video from './Video';
 import Summary from './Summary';
 import API from './api';
 
@@ -30,7 +31,12 @@ export default function Apod( props ){
     return (
         <div>
             <Headline text={ details.title } />
-            <Photo url={ details.url } hd={ details.hdurl } alt={ details.title } />
+            {
+                details.media_type === "image" 
+                ? <Photo url={ details.url } hd={ details.hdurl } alt={ details.title } /> 
+                : <Video url={ details.url } /> 
+
+            }
             <Summary text={ details.explanation } />
         </div>
     );
