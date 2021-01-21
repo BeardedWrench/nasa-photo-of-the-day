@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar onChange={ changeDate } current={ day }/>
+      <SearchBar onChange={ changeDate } current={ day } />
       <Apod date={ day } />
     </div>
   );
